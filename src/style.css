@@ -1,0 +1,243 @@
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--grayish-blue);
+}
+
+main {
+    font-family: 'Manrope';
+    font-size: 13px;
+    min-height: 100vh;
+    color: var(--desaturated-dark-blue);
+    padding: 75px 25px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 330px;
+}
+
+.card-image {
+    background-image: url("/images/drawers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom -4vh center;
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+}
+
+.card-info {
+    padding: 40px 34px 10px;
+}
+
+.card-content h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+.avatar-footer {
+    padding: 20px 34px 20px;
+    position: relative;
+}
+
+.avatar-footer .open-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    left: 0px;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.avatar-footer .open-share.clicked {
+    height: 65px;
+    overflow: visible;
+    padding: 34px;
+}
+
+.avatar-footer .open-share .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+    letter-spacing: 5px;
+}
+
+.avatar-footer .open-share .share ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-footer .open-share .share li {
+    margin-left: 20px;
+}
+
+.share-icon img {
+    justify-content: end;
+    filter: brightness(0) invert(1);
+}
+
+.share-icon {
+    display: flex;
+    align-items: center;
+    background-color: var(--desaturated-dark-blue);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.avatar-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-image {
+    margin-right: 15px;
+}
+
+.avatar-content {
+    display: flex;
+}
+
+.avatar-content img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+p.name {
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+
+.share-icon2 img {
+    width: 100%;
+}
+
+.share-icon2 {
+    padding: 10px;
+    background-color: var(--light-grayish-blue);
+    justify-content: end;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+/* DESKTOP STYLES */
+
+@media (min-width: 900px) {
+    .card {
+        display: flex;
+        max-width: 730px;
+        max-height: 280px;
+    }
+    .card-image,
+    .card-content {
+        flex: 1;
+    }
+    .card-info h1 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+    .card-info {
+        padding-bottom: 0;
+        padding: 40px 40px 0;
+    }
+    .card-content {
+        min-width: 450px;
+    }
+    .avatar-footer {
+        padding: 15px 40px 40px;
+    }
+    .card-image {
+        background-image: url("/images/drawers.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0;
+        border-radius: 10px 0 0 10px;
+        height: auto;
+    }
+    .card-image img {
+        display: none;
+    }
+    .avatar-footer .open-share {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        border-radius: 10px;
+        left: 59.5%;
+        bottom: 95px;
+        width: 250px;
+    }
+    .avatar-footer .open-share.clicked {
+        height: 55px;
+        padding: 0px;
+    }
+    .share-icon {
+        bottom: -50px;
+        position: absolute;
+    }
+    .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 12px solid var(--very-dark-grayish-blue);
+        bottom: -10px;
+        z-index: 1;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
